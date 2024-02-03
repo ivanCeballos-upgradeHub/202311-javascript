@@ -14,7 +14,7 @@ const videogames = [
 
 const genderToFilter = 'RPG';
 const videogamesFiltered = videogames.filter((videogame) => videogame.genders.includes(genderToFilter));
-const totalScores = videogamesFiltered.reduce((total, videogame) => total + videogame.score);
+const totalScores = videogamesFiltered.reduce((total, videogame) => total + videogame.score, 0);
 const mean = totalScores / videogamesFiltered.length;
 
 console.log(`Media de juegos de la categoría ${genderToFilter} es ${mean}`);
