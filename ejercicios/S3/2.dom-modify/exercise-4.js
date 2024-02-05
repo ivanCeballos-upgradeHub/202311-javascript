@@ -4,6 +4,5 @@
 
 const p = document.createElement('p');
 p.textContent = 'Soy dinámico!';
-p.append(document.createTextNode('Soy dinámico!'));
 
-document.body.appendChild(p);
+document.body.append(p);

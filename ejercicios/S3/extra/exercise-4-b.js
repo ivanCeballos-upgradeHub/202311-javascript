@@ -7,32 +7,21 @@ const countries = [
     { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2' },
     { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3' },
     { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4' },
-    { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5' },
+    { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5' }
 ];
 
-for (country of countries) {
-    const div = document.createElement("div");
-
-    const h4 = document.createElement("h4");
+for (let country of countries) {
+    const div = document.createElement('div');
+    const h4 = document.createElement('h4');
     h4.textContent = country.title;
 
-    const img = document.createElement("img");
+    const img = document.createElement('img');
     img.src = country.imgUrl;
 
-    div.appendChild(h4);
-    div.appendChild(img);
-
-    document.body.appendChild(div);
+    div.append(h4, div);
+    document.body.append(div);
 }
 
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-    const divs = document.querySelectorAll('div');
-
-    if (divs.length === 0) {
-        return;
-    }
-
-    const divAEliminar = divs[divs.length - 1];
-    document.body.removeChild(divAEliminar);
+document.querySelector('button').addEventListener(() => {
+    document.querySelector('div:nth-last-child(1)')?.remove();
 });
