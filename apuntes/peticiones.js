@@ -15,7 +15,6 @@
 /**
  * Para hacer una petición al back la haremos de la siguiente manera:
  */
-
 fetch(
     /** URL */ 'https://pokeapi.co/api/v2/pokemon/ditto',
     /** Opciones de configuración (opcional) */ {

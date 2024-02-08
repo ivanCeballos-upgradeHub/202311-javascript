@@ -27,10 +27,34 @@
  * - Color
  * - Marca
  * - Modelo
+ * 
+ * Estos serán atributos del coche
+ * 
+ * Acciones que realizarán los coches:
+ * - Moverse
+ * - Parar
+ * - Girar
+ * 
+ * Estos serán métodos
  */
 
 class Coche {
     color;
     marca;
     modelo;
+
+    constructor(color, marca, modelo) {
+        this.color = color;
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    moverse() {}
+    parar() {}
+    girar() {}
 }
+
+const fordFiestaBlanco = new Coche('blanco', 'Ford', 'Fiesta');
+fordFiestaBlanco.moverse();
+
+const fiatPandaRojo = new Coche('rojo', 'Fiat', 'Panda');

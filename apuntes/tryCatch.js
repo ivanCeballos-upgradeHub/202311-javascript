@@ -43,3 +43,48 @@ try {
  * No hay que controlar absolutamente todos los errores porque se llenará el código de try..catch.
  * Hay que usarlos en casos muy específicos.
  */
+
+function a(texto) {
+    console.log(texto);
+
+    if (!texto) {
+        throw new Error('Texto es vacio');
+    }
+
+    console.log('Todo bien');
+}
+
+function b(user, texto) {
+    console.log(user);
+
+    try {
+        a(texto);
+
+        if (!user) {
+            throw new Error('Usuario vacío');
+        }
+    } catch (error) {
+        console.error('Error en B', error);
+    }
+
+    console.log('Todo bien');
+}
+
+function process() {
+    let user = input('Cual es tu usuario'); // pablito
+    let texto = input('Cual es el texto'); // ''
+
+    try {
+        b(user, texto);
+    } catch (error) {
+        console.error('Error', error);
+    }
+}
+
+try {
+    process();
+} catch(error) {
+    // error
+}
+
+console.log('Todo válido');
