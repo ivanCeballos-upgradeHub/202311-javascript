@@ -57,10 +57,14 @@ fetch('https://pokeapi.co/api/v2/pokemon/ditto')
 */
 
 async function a() {
-    console.log('Pido a la API, pero me espero a la respuesta');
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
-    console.log('Hola');
-    console.log(response);
+    try {
+        console.log('Pido a la API, pero me espero a la respuesta');
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+        console.log('Hola');
+        console.log(response);
+    } catch (error) {
+        console.error('Error de comunicación');
+    }
 }
 
 a();

@@ -8,10 +8,7 @@ const ul = document.createElement('ul');
 
 for (let app of apps) {
     const li = document.createElement('li');
-
     li.textContent = app;
 
     ul.append(li);
 }
-
-document.body.append(ul);
