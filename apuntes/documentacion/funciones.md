@@ -11,6 +11,7 @@ Para documentar funciones, tenemos que usar las siguientes notaciones:
  */
 ```
 > :warning: Si la función no tiene parámetros, simplemente no se indica.
+
 Ejemplo
 ```js
 /**
