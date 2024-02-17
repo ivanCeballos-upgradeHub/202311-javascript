@@ -60,3 +60,6 @@ En este caso, el JSDoc no se usa para documentar cosas sino para indicar notas e
      * @TODO: Hay que refactorizar esto.
      */
     ```
+
+## Fuentes:
+[Documentación oficial de JSDoc](https://jsdoc.app/)
